@@ -1,0 +1,5 @@
+nome = input('Digite seu nome')
+sobrenome = input('Digite seu sobrenome')
+email = input('Digite seu email')
+senha = input('Digite sua senha')
+print('Suas informações acerca de {}, {}, {} e {}'.format(nome,sobrenome,email,senha))
