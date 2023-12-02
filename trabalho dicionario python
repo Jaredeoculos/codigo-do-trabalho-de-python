@@ -1,0 +1,26 @@
+#para descobrir o email de um usuário específico
+
+emails_usuarios = {
+    "Caio": "caio@gmail.com",
+    "Lucas": "lucas@gmail.com",
+    "Matheus": "matheus@gmail.com"
+}
+emails = emails_usuarios["Caio"]
+print(emails)
+
+#Adicionar um email de usuario novo
+
+emails_usuarios["Daniel"] = "daniel@gmail.com"
+print(emails_usuarios)
+
+#Descobrir todos os usuarios cadastrados que temos
+
+for usuarios in emails_usuarios:
+    print(usuarios)
+
+#Descobrir se um email ou usuário existe no sistema
+
+if "Jose" in emails_usuarios:
+    print('Existe')
+else:
+    print("Não existe")
