@@ -1,0 +1,78 @@
+#para descobrir o email de um usuário específico
+
+emails_usuarios = {
+    "Caio": "caio@gmail.com",
+    "Lucas": "lucas@gmail.com",
+    "Matheus": "matheus@gmail.com"
+}
+emails = emails_usuarios["Caio"]
+print(emails)
+
+#Adicionar um email de usuario novo
+
+emails_usuarios["Daniel"] = "daniel@gmail.com"
+print(emails_usuarios)
+
+
+#Excluindo um email que já está cadastrado no sistema
+
+emails_usuarios.pop("Daniel")
+print(emails_usuarios)
+
+#Descobrir todos os emails cadastrados que temos
+
+for usuarios in emails_usuarios:
+    print(usuarios)
+
+#Descobrir se um email ou usuário existe no sistema
+
+if "Jose" in emails_usuarios:
+    print('Existe')
+else:
+    print("Não existe")
+
+
+#Como seria para consultar os emails?
+
+nome = input('Bem vindo de volta, Caio. O que deseja fazer?')
+print('Claro! Aqui está a lista de todos os emails. {}'.format(emails_usuarios))
+
+saude = {}
+saude['outra'] ='coisa'
+saude['mais'] = 'uma'
+
+#Pegar a entrada do usuário
+
+
+opcao = ''
+while opcao != '0':
+  opcao = input('Escreva opção: ')
+
+  match opcao:
+      case '0':
+          print('zero')
+
+      case '1':
+          email = input('Digite seu email')
+          nome = input('Digite seu nome')
+          emails_usuarios[nome] = email
+          print(emails_usuarios)
+          print('um')
+
+      case '2':
+          emails_usuarios.pop("Lucas")
+          print(emails_usuarios)
+          print('dois')
+
+      case '3':
+          for usuarios in emails_usuarios:
+              print(usuarios)
+          print('tres')
+
+      case '4':
+          emails_usuarios["Daniel"] = "daniel123@gmail.com"
+          print(emails_usuarios)
+          print('quatro')
+
+      case default:
+          print(f'"{opcao}" não é um número, tonto!')
