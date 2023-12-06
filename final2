@@ -1,0 +1,44 @@
+emails_usuarios = {}
+
+opcao = ''
+while opcao != '0':
+  opcao = input('Aperte 1 para adicionar um email'
+                '\n'
+                'Aperte 2 para excluir um email'
+                '\n'
+                "Aperte 3 para verificar todos os emails no sistema"
+                "\n"
+                "Aperte 4 para alterar um email"
+                "\n"
+                "Aperte 0 para encerrar o sistema"
+                "\n"
+                "> ")
+
+  match opcao:
+      case '0':
+          print('Encerrando...')
+
+      case '1':
+          email = input('Digite seu email')
+          nome = input('Digite seu nome')
+          emails_usuarios[nome] = email
+          print(emails_usuarios)
+
+      case '2':
+          exnome = input('Digite o nome que você quer excluir')
+          emails_usuarios.pop(exnome)
+          print(emails_usuarios)
+
+      case '3':
+          for usuarios in emails_usuarios:
+              print(usuarios)
+
+      case '4':
+          ednome = input('altere o seu nome')
+          edemail = input('altere o seu email')
+          emails_usuarios[ednome] = edemail
+          print(emails_usuarios)
+
+      case default:
+          print(f'"{opcao}" não é um número, tonto!')
+
